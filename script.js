@@ -55,8 +55,10 @@ document.addEventListener('DOMContentLoaded', () => {
             score++;
             scoreDisplay.textContent = score;
             clearInterval(interval);
-            
+            intervalTime = intervalTime * speed;
+            interval = setInterval(moveOutcomes, intervalTime);
         }
+        squares[currentSnake[0]].classList.add('snake');
     }
 
     //assign functions to keycodes
