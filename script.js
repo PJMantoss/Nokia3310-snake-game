@@ -44,7 +44,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const tail = currentSnake.pop(); // removes last ... of the array and shows it
         squares[tail].classList.remove('snake'); // removes class of snake from the Tail
-        currentSnake.unshift(); //
+        currentSnake.unshift(currentSnake[0] + direction); // provides direction for the head of the array
+
+        // Handles snake swallowing apple
+        if(squares[currentSnake[0]].classList.contains('apple')){
+            squares[currentSnake[0]].classList.contains('apple');
+            squares[tail].classList.add('snake');
+            currentSnake.push(tail);
+            randomApple();
+            score++;
+            scoreDisplay.textContent = score;
+            clearInterval(interval);
+            
+        }
     }
 
     //assign functions to keycodes
