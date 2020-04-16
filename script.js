@@ -29,7 +29,12 @@ document.addEventListener('DOMContentLoaded', () => {
         interval = setInterval(moveOutcomes, intervalTime);
     }
 
-    //asign functions to keycodes
+    //Function that handles all the move outcomes of the snake
+    moveOutcomes = () => {
+        
+    }
+
+    //assign functions to keycodes
     control = e => {
         //removing the class of snake from all squares
         squares[currentIndex].classList.remove('snake');
@@ -37,7 +42,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if(e.keycode === 39){
             direction = 1; //If we press the right arrow on our keyboard,the snake will go right once
         } else if (e.keycode === 38){
-            direction = -width; // if we press the up arrow, the snake will go back 10 divs,appearing to go up
+            direction = -width; // If we press the up arrow, the snake will go back 10 divs,appearing to go up
+        } else if (e.keycode === 37){
+            direction = -1; // If we press left, the snake will go left once
+        } else if (e.keycode === 40){
+            direction = +width; //If we press down, the snake's head will instantly appear in the div ten divs from your current position
         }
     }
+
+    document.addEventListener('keyup', control);
+    document.addEventListener('click', startBtn);
 })
