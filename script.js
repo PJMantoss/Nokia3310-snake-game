@@ -31,7 +31,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //Function that handles all the move outcomes of the snake
     moveOutcomes = () => {
-        
+        //Handles snake hitting border and/or self
+        if(
+            (currentSnake[0] + width >= (width * width) && direction === width) || //If snake hits bottom
+            (currentSnake[0] % width === width -1 && direction === 1) || //If snake hits right wall
+            (currentSnake[0] % width === 0 && direction === -1) || //If snake hits left wall
+            (currentSnake[0] - width < 0 && direction === -width) || //If snake hits the top
+            squares[currentSnake[0] + direction].classList.contains('snake') //If snake bumps into itself
+        ){
+            return clearInterval(interval) //This will clear the interval if any of the above happens
+        }
+
+        const tail = currentSnake.pop(); // removes last ... of the array and shows it
+        squares[tail].classList.remove('snake'); // removes class of snake from the Tail
+        currentSnake.unshift(); //
     }
 
     //assign functions to keycodes
