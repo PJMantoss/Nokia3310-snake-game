@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             (currentSnake[0] - width < 0 && direction === -width) || //If snake hits the top
             squares[currentSnake[0] + direction].classList.contains('snake') //If snake bumps into itself
         ){
-            return clearInterval(interval) //This will clear the interval if any of the above happens
+            return clearInterval(interval); //This will clear the interval if any of the above happens
         }
 
         const tail = currentSnake.pop(); // removes last member of the array and shows it
@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Handles snake swallowing apple
         if(squares[currentSnake[0]].classList.contains('apple')){
-            squares[currentSnake[0]].classList.contains('apple');
+            squares[currentSnake[0]].classList.remove('apple');
             squares[tail].classList.add('snake');
             currentSnake.push(tail);
             //randomApple();
@@ -66,17 +66,17 @@ document.addEventListener('DOMContentLoaded', () => {
         //removing the class of snake from all squares
         squares[currentIndex].classList.remove('snake');
 
-        if(e.keycode === 39){
+        if(e.keyCode === 39){
             direction = 1; //If we press the right arrow on our keyboard,the snake will go right once
-        } else if (e.keycode === 38){
+        } else if (e.keyCode === 38){
             direction = -width; // If we press the up arrow, the snake will go back 10 divs,appearing to go up
-        } else if (e.keycode === 37){
+        } else if (e.keyCode === 37){
             direction = -1; // If we press left, the snake will go left once
-        } else if (e.keycode === 40){
+        } else if (e.keyCode === 40){
             direction = +width; //If we press down, the snake's head will instantly appear in the div ten divs from your current position
         }
     }
 
     document.addEventListener('keyup', control);
-    document.addEventListener('click', startBtn);
+    startBtn.addEventListener('click', startGame);
 })
