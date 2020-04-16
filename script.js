@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     randomApple = () => {
         do {
             appleIndex = Math.floor(Math.random() * squares.length)
-        } while(squares[appleIndex].classList.contains('snake'));
+        } while(squares[appleIndex].classList.contains('snake'));//To be sure that apples don't appear on the snake
         squares[appleIndex].classList.add('apple');
     }
 
