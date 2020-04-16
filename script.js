@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const squares = document.querySelectorAll('.gird div');
+    const squares = document.querySelectorAll('.grid div');
     const scoreDisplay = document.querySelector('span');
     const startBtn = document.querySelector('.start');
 
@@ -27,5 +27,17 @@ document.addEventListener('DOMContentLoaded', () => {
         currentIndex = 0;
         currentSnake.forEach(index => squares[index].classList.add('snake'));
         interval = setInterval(moveOutcomes, intervalTime);
+    }
+
+    //asign functions to keycodes
+    control = e => {
+        //removing the class of snake from all squares
+        squares[currentIndex].classList.remove('snake');
+
+        if(e.keycode === 39){
+            direction = 1; //If we press the right arrow on our keyboard,the snake will go right once
+        } else if (e.keycode === 38){
+            direction = -width; // if we press the up arrow, the snake will go back 10 divs,appearing to go up
+        }
     }
 })
