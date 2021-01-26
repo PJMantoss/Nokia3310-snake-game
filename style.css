@@ -12,6 +12,7 @@ body {
 }
 
 header {
+    width: 100%;
     display: inherit;
     margin-bottom: 30px;
     flex-direction: column;
