@@ -71,3 +71,8 @@ header > .score {
 .apple {
     background: green;
 }
+
+footer {
+    display: flex;
+    
+}
