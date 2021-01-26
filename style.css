@@ -25,6 +25,7 @@ header > button {
     display: block;
     width: 200px;
     padding: 12px 16px;
+    background: green;
 }
 
 .grid{
