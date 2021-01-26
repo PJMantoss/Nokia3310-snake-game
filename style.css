@@ -12,11 +12,12 @@ body {
 }
 
 header {
+    display: inherit;
     margin-bottom: 30px;
 }
 
-header button {
-    max-width: 250px;
+header > button {
+    max-width: 500px;
 }
 
 .grid{
