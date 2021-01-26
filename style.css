@@ -37,6 +37,7 @@ header > button {
 button:hover {
     transform: scale(1.08);
     background: orange;
+    color: black;
 }
 
 .grid{
