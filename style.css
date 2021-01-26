@@ -23,7 +23,7 @@ header {
 
 header > button {
     display: block;
-    max-width: 500px;
+    width: 500px;
 }
 
 .grid{
