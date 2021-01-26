@@ -54,6 +54,7 @@ header > .score {
     height: 200px;
     border-style: solid;
     background: rgb(247, 247, 100);
+    margin-bottom: 30px;
 }
 
 .grid div {
