@@ -15,7 +15,9 @@ header {
     margin-bottom: 30px;
 }
 
-header button {}
+header button {
+    max-width: 250px;
+}
 
 .grid{
     display: flex;
