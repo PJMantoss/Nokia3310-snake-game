@@ -34,7 +34,9 @@ header > button {
     font-weight: bold;
 }
 
-button:hover {}
+button:hover {
+    transform: scale(1.1);
+}
 
 .grid{
     display: flex;
