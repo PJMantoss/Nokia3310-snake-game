@@ -42,6 +42,10 @@ button:hover {
     color: black;
 }
 
+.score {
+    font-size: ;
+}
+
 .grid{
     display: flex;
     flex-wrap: wrap;
