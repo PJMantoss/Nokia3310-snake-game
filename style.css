@@ -42,7 +42,7 @@ button:hover {
     color: black;
 }
 
-.score {
+header > .score {
     font-size: 16px;
 }
 
