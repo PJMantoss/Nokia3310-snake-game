@@ -52,7 +52,7 @@ header > .score {
     width: 200px;
     height: 200px;
     border-style: solid;
-    background: yellow;
+    background: rgb(247, 247, 100);
 }
 
 .grid div {
