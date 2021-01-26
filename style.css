@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+body {
+    display: flex;
+}
+
 .grid{
     display: flex;
     flex-wrap: wrap;
