@@ -14,13 +14,13 @@ body {
 header {
     display: inherit;
     margin-bottom: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 header > button {
     max-width: 500px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .grid{
